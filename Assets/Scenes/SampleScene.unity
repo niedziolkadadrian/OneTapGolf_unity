@@ -305,6 +305,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1085139125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8902393046187804800, guid: dfcb5675556aefd41b916d08ef3089b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 847298679246488851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1085139126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085139125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b4cd29dd27f6745925bde334ab20a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1243057249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4113219491965117055, guid: dfcb5675556aefd41b916d08ef3089b9,
@@ -341,13 +359,13 @@ PolygonCollider2D:
       - {x: 0.24854764, y: -0.17944503}
       - {x: -0.2212863, y: -0.18511057}
       - {x: -0.44732308, y: 0.019980669}
-      - {x: -0.46839908, y: 0.35597932}
-      - {x: -1.0363996, y: 0.35680005}
+      - {x: -0.46591428, y: 0.35846412}
+      - {x: -0.63690215, y: 0.36334917}
       - {x: -0.6056892, y: -0.065}
       - {x: -0.29677188, y: -0.3383684}
       - {x: 0.33202106, y: -0.3306894}
       - {x: 0.6004168, y: -0.08041699}
-      - {x: 0.88964224, y: 0.35643098}
+      - {x: 0.6381165, y: 0.36055443}
 --- !u!61 &1243057254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -602,6 +620,7 @@ GameObject:
   - component: {fileID: 1833772963}
   - component: {fileID: 1833772962}
   - component: {fileID: 1833772961}
+  - component: {fileID: 1833772965}
   m_Layer: 0
   m_Name: object_ball
   m_TagString: Untagged
@@ -704,12 +723,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833772960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47, y: -0.61, z: 0}
+  m_LocalPosition: {x: -7, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833772965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833772960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08d361ff14563845b92f79ea85175d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angle: 45
+  initialVelocity: 400
+  roundVelIncrement: 0
+  lineObj: {fileID: 3340234201235626460, guid: 2d13f84558d606a48980592b3e7f17f4, type: 3}
 --- !u!1 &1839536564
 GameObject:
   m_ObjectHideFlags: 0
