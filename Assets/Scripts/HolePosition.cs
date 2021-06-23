@@ -10,13 +10,8 @@ public class HolePosition : MonoBehaviour
         ResetHole();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void ResetHole() {
+    //calculating and setting new hole position
+    public void ResetHole() {
         transform.position = new Vector3(Random.Range(.0f,8.0f),0,0);
     }
 }
