@@ -10,9 +10,9 @@ public abstract class State
     }
     //Called when entering the state
     public virtual void StateStart(){}
+
     //called when left mouse button down
     public virtual void LmbDown(){}
-
     //called when left mouse button up
     public virtual void LmbUp(){}
 }

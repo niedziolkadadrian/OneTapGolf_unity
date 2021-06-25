@@ -11,7 +11,7 @@ public class GameStateMachine : MonoBehaviour
     [SerializeField] public CanvasGroup pointsPanel;
 
     Points pts;
-    State state;
+    State state;    //actual state
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,11 @@ public class GameStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //execute when LMB Down
         if(Input.GetMouseButtonDown(0)){
             state.LmbDown();
         }
+        //execute when LMB Up
         else if(Input.GetMouseButtonUp(0)){
             state.LmbUp();
         }

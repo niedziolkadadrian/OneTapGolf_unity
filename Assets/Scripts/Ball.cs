@@ -11,14 +11,14 @@ public class Ball : MonoBehaviour
     [SerializeField] float incrementPerRound;
     [SerializeField] GameObject lineObj;
     private Rigidbody2D rb;
-    private Vector2 forceVector;
-    private Vector2 startLoc;
-    private List<GameObject> dots;
-    private float throwVel=0;
-    private float acceleration;
-    private float radAngle;
+    private Vector2 forceVector;    //normalized vector in which ball will be throwed
+    private Vector2 startLoc;       //start location of the ball       
+    private List<GameObject> dots;  //list of dots in throw line
+    private float throwVel=0;       //throw velocity
+    private float acceleration;     //acceleration to the velocity
+    private float radAngle;         //angle in radians
     private enum BallState{Initial, Throwing, Throw, Throwed};
-    BallState ballState;
+    private BallState ballState;    //state of the ball
 
     private GameStateMachine gameStateMachine;
 
