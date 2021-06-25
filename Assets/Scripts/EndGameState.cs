@@ -9,10 +9,19 @@ public class EndGameState : State
 
     public override void StateStart()
     {
-        //reading best score from file
-        StreamReader reader = new StreamReader("Assets/score.txt");
-        int best_score = int.Parse(reader.ReadLine());
-        reader.Close();
+        int best_score = 0 ;
+        //reading best score from file if exists
+        if(File.Exists("score.txt")){
+            StreamReader reader = new StreamReader("score.txt");
+            best_score = int.Parse(reader.ReadLine());
+            reader.Close();
+        }
+        else{
+            //creating file if not exists
+            StreamWriter sw =File.CreateText("score.txt");
+            sw.Write("0");
+            sw.Close();
+        }
 
         //getting actual score
         int score = stateMachine.getPoints().points;
@@ -22,7 +31,7 @@ public class EndGameState : State
         
         //saving new best score
         if(score>best_score){
-            StreamWriter writer = new StreamWriter("Assets/score.txt");
+            StreamWriter writer = new StreamWriter("score.txt");
             writer.Write(score.ToString());
             writer.Close();
         }
